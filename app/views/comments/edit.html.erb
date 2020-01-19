@@ -1,0 +1,16 @@
+<h1>Comment Edit Form</h1>
+
+<%= form_with(model: [@project, @discussion, @comment], local: true) do |f| %>
+    <% if @comment.errors.present? %>
+        <p class="form-errors" >
+            <%= @comment.errors.full_messages.join(", ") %>
+        </p>
+    <% end %>
+
+    <div class="form-control" >
+        <%= form.label :body %><br>
+        <%= form.text_area :body, cols: 50, rows:5%>
+    </div>
+    
+    <%= f.submit 'Comment' %>
+<% end %>

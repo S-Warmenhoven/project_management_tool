@@ -1,0 +1,121 @@
+<h1><%= @project.title %></h1>
+<p><%= @project.description %></p>
+<p>Due Date: <%= @project.due_date %></p>
+<%= link_to 'Edit', edit_project_path(@project) %>
+<%= link_to 'Delete', project_path(@project), method: :delete, data: { confirm: 'Are you sure you want to delete this project?' } %>
+
+<section>
+    <h2>Project Tasks</h2>
+    <div class="grid-container" >
+    
+        <div class="grid-item" >
+            <h4>Done</h4>
+            <% @tasks.each do |task| %>
+                <% if task.is_done %>
+                    <h5><%= task.title %></h5>
+                    <p><%= task.body %></p>
+                    <p>Due: <%= task.due_date %></p>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="grid-item">
+            <h4>Not done</h4>
+            <% @tasks.each do |task| %>
+                <% unless task.is_done %>
+                <h5><%= task.title %></h5>
+                <p><%= task.body %></p>
+                <p>Due: <%= task.due_date %></p>
+            <% end %>
+        <% end %>
+    </div>
+    <div>
+        <h1>Add a Project Task</h1>
+        <%= form_with(model: [@project, @task], local: true) do |f| %>
+            <% if @task.errors.present? %>
+               <p class="form-errors" >
+                <%= @task.errors.full_messages.join(", ") %>
+              </p>
+            <% end %>
+
+            <div class="form-group" >
+                <div class="form-control" >
+                    <%= form.label :title%><br>
+                    <%= form.text_field :title %>
+                </div>
+                <div class="form-control" >
+                    <%= f.label :due_date %>
+                    <%= f.date_field :due_date %>
+                </div>
+            </div>
+            <%= f.submit 'Task' %>
+        <% end %>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h1>Add Project Discussions</h1>
+
+    <%= form_with(model: [@project, @discussion], local: true) do |f| %>
+        <% if @discussion.errors.present? %>
+            <p class="form-errors" >
+                <%= @discussion.errors.full_messages.join(", ") %>
+            </p>
+        <% end %>
+
+        <div class="form-group" >
+            <div class="form-control" >
+                <%= form.label :title%><br>
+                <%= form.text_field :title %>
+            </div>
+            <div class="form-control" >
+                <%= form.label :description %><br>
+                <%= form.text_area :description, cols: 50, rows:5%>
+            </div>
+        </div>
+        <%= f.submit 'Discussion' %>
+    <% end %>
+
+    <% @discussions.each do |discussion| %>
+        <div>
+            <h4>Discussion Topic: <%= discussion.title %></h4>
+            <p>
+                <h3><%= discussion.decription %></h3>
+            </p>
+            <%= link_to 'Delete', discussion_path(discussion), method: :delete, data: { confirm: 'Are you sure that you want to delete this discussion?' } %> 
+            <%= link_to 'Edit', edit_discussion_path(discussion), method: :edit %>
+        </div>
+
+        <section>
+
+            <h1>Comment on Discussion</h1>
+
+            <%= form_with(model: [@project, @discussion, @comment], local: true) do |f| %>
+                <% if @comment.errors.present? %>
+                    <p class="form-errors" >
+                        <%= @comment.errors.full_messages.join(", ") %>
+                    </p>
+                <% end %>
+
+                <div class="form-control" >
+                   <%= form.label :body %><br>
+                   <%= form.text_area :body, cols: 50, rows:5%>
+                </div>
+    
+                <%= f.submit 'Comment' %>
+            <% end %>
+
+            <% @comments.each do |comment| %>
+                <div>
+                   <p>
+                       <h4><%= comment.body %></h4>
+                    </p>
+                    <%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure that you want to delete this comment?' } %> 
+                    <%= link_to 'Edit', edit_comment_path(comment), method: :edit %>
+                </div>
+            <% end %>
+        </section>
+    <% end %>
+</section>
