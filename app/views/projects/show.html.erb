@@ -30,7 +30,7 @@
     </div>
     <div>
         <h1>Add a Project Task</h1>
-        <%= form_with(model: [@project, @task], local: true) do |f| %>
+        <%= form_with model: [@project, @task], local: true do |f| %>
             <% if @task.errors.present? %>
                <p class="form-errors" >
                 <%= @task.errors.full_messages.join(", ") %>
@@ -39,8 +39,8 @@
 
             <div class="form-group" >
                 <div class="form-control" >
-                    <%= form.label :title%><br>
-                    <%= form.text_field :title %>
+                    <%= f.label :title%><br>
+                    <%= f.text_field :title %>
                 </div>
                 <div class="form-control" >
                     <%= f.label :due_date %>
@@ -58,7 +58,7 @@
 
     <h1>Add Project Discussions</h1>
 
-    <%= form_with(model: [@project, @discussion], local: true) do |f| %>
+    <%= form_with model: [@project, @discussion], local: true do |f| %>
         <% if @discussion.errors.present? %>
             <p class="form-errors" >
                 <%= @discussion.errors.full_messages.join(", ") %>
@@ -67,12 +67,12 @@
 
         <div class="form-group" >
             <div class="form-control" >
-                <%= form.label :title%><br>
-                <%= form.text_field :title %>
+                <%= f.label :title%><br>
+                <%= f.text_field :title %>
             </div>
             <div class="form-control" >
-                <%= form.label :description %><br>
-                <%= form.text_area :description, cols: 50, rows:5%>
+                <%= f.label :description %><br>
+                <%= f.text_area :description, cols: 50, rows:5%>
             </div>
         </div>
         <%= f.submit 'Discussion' %>
@@ -100,8 +100,8 @@
                 <% end %>
 
                 <div class="form-control" >
-                   <%= form.label :body %><br>
-                   <%= form.text_area :body, cols: 50, rows:5%>
+                   <%= f.label :body %><br>
+                   <%= f.text_area :body, cols: 50, rows:5%>
                 </div>
     
                 <%= f.submit 'Comment' %>

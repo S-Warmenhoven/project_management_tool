@@ -29,7 +29,7 @@ class ProjectsController < ApplicationController
         @discussion = Discussion.new
         @discussions = @project.discussions
         @comment = Comment.new
-        @comments = @project.discussion.comments
+        @comments = @discussion.comments
     end
 
     def edit
@@ -58,6 +58,10 @@ class ProjectsController < ApplicationController
 
     def find_project
         @project = Project.find params[:id]
+    end
+
+    def authorize!
+        redirect_to root_path, alert: "Access Denied" unless can? :crud, @project
     end
 
 end

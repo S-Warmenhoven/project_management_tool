@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get("/about", { to: "home#about", as: :about })
 
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :edit, :update]
 
   resource :session, only: [:new, :create, :destroy]
   # Notice that `resource` is singular. Unlike `resources`,

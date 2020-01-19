@@ -1,12 +1,12 @@
 class SessionsController < ApplicationController
-    
+
     def new
     end
 
     def create
-        user = User.find_by_email params[:email]
-        if user&.authenticate(params[:password])
-            session[:user_id] = user.id
+        @user = User.find_by_email params[:email]
+        if @user&.authenticate(params[:password])
+            session[:user_id] = @user.id
             redirect_to root_path, notice: "Logged In"
         else
             flash[:alert] = "Sorry, wrong email or password"
@@ -18,5 +18,14 @@ class SessionsController < ApplicationController
         session[:user_id] = nil
         redirect_to root_path, notice: "Logged out!"
     end
+
+    # def forgot_password
+    #     @user = User.find_by_email params[:email]
+    #     if @user&.authenticate(params[:email])
+    #         #send email token to user
+    #     else
+    #         flash[:danger] = "No such email found."
+    #     end
+    # end
 
 end

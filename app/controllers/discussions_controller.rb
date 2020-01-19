@@ -49,4 +49,9 @@ class DiscussionsController < ApplicationController
     def discussion_params
         params.require(:discussion).permit(:title, :description)
     end
+
+    def authorize!
+        redirect_to root_path, alert: "Access Denied" unless can? :crud, @discussion
+    end
+
 end

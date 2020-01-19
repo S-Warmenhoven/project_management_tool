@@ -12,12 +12,12 @@ class UsersController < ApplicationController
         @user = User.new user_params
         if @user.save
             session[:user_id] = @user.id
-            flash[:notice] = "Thank you for signing up!"
+            flash[:alert] = "Thank you for signing up"
             redirect_to root_path
         else
             render :new
-        end             
-    end
+        end 
+    end           
 
     def edit  
     end
@@ -59,6 +59,10 @@ class UsersController < ApplicationController
         end
     end
 
+    def reset_password
+        @user = User.find_by_email params[:email]
+    end
+
     private
 
     def user_params
@@ -72,8 +76,13 @@ class UsersController < ApplicationController
     end
 
     def authorize!
-        redirect_to root_path, alert: "Access Denied" unless can? :crud, @user
+        unless can? :crud, @user
+        redirect_to root_path, 
+        flash[:alert] =  'Access Denied'
+        end
     end
+
+end
 
 end
 
