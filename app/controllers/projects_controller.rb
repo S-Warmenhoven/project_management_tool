@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
-    
+
+    before_action :authenticate_user!, except: [:index, :show]
     before_action :find_project, only: [:edit, :update, :show, :destroy]
     before_action :project_params, only: [:create, :update]
     
@@ -13,6 +14,7 @@ class ProjectsController < ApplicationController
 
     def create
         @project = Project.new project_params
+        @project.user = current_user
         if @project.save
             flash[:notice] = 'Project added successfully'
             redirect_to project_path(@project)

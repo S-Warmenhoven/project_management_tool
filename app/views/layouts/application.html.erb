@@ -13,29 +13,51 @@
   <div class="container-fluid">
     <nav class="navbar-brand navbar-expand-xl navbar-light bg-light navbar-between">
       <div>
-      <%= link_to 'Product Management', root_path, { class: "navbar-link"} %>
+        <%= link_to 'Product Management', root_path, { class: "navbar-link"} %>
       </div>
       <ul class="navbar-nav navbar-expand">
-      <li class="nav-item ml-3">
-      <small>
-      <%= link_to 'Home', root_path %>
-      </small>
-      </li>
-      <li class="nav-item ml-3">
-      <small>
-      <%= link_to 'About', about_path %>
-      </small>
-      </li>
-      <li class="nav-item ml-3">
-      <small>
-      <%= link_to 'Projects', projects_path %>
-      </small>
-      </li>
-      <li class="nav-item ml-3">
-      <small>
-      <%= link_to 'New Project', new_project_path %>
-      </small>
-      </li>
+        <li class="nav-item ml-3">
+        <small>
+        <%= link_to 'Home', root_path %>
+        </small>
+        </li>
+        <li class="nav-item ml-3">
+        <small>
+        <%= link_to 'About', about_path %>
+        </small>
+        </li>
+        <li class="nav-item ml-3">
+        <small>
+        <%= link_to 'Projects', projects_path %>
+        </small>
+        </li>
+        <li class="nav-item ml-3">
+        <small>
+        <%= link_to 'New Project', new_project_path %>
+        </small>
+        </li>
+
+        <% if user_signed_in? %>
+          <li class="nav-item ml-3">
+            <span>Hello, <%= link_to "#{current_user.first_name}", edit_user_path(current_user) %>!</span>
+            <small>
+            <%= link_to "Logout", session_path(@session), method: :delete,
+            data: {confirm: "Are you sure you want to log out?"} %>
+            </small>
+          </li>
+        <% else %>
+          <li class="nav-item ml-3">
+            <small>
+              <%= link_to "Login", new_session_path %>
+            </small>
+          </li>
+          <li class="nav-item ml-3">
+            <small>
+              <%= link_to "Sign Up", new_user_path %>
+            </small>
+          </li>
+        <% end %>
+
       </ul>
     </nav>
     <% flash.each do |type, message| %>

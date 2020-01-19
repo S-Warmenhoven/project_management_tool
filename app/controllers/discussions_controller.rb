@@ -1,11 +1,14 @@
 class DiscussionsController < ApplicationController
-  before_action :find_discussion, only: [:destroy, :edit, :update]
-  before_action :description_params, only: [:create, :update]
+
+    before_action :authenticate_user!
+    before_action :find_discussion, only: [:destroy, :edit, :update]
+    before_action :description_params, only: [:create, :update]
 
 
     def create
         @project = Project.find(params[:project_id])
         @discussion = Discussion.new discussion_params
+        @discussion.user = current_user
         @discussion.project = @project
         if @discussion.save
             flash[:notice] = 'Discussion created successfully'

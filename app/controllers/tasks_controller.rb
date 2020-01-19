@@ -1,12 +1,14 @@
 class TasksController < ApplicationController
 
-  before_action :find_task, only: [:edit, :update]
-  before_action :task_params, only: [:create, :update]
+    before_action :authenticate_user!
+    before_action :find_task, only: [:edit, :update]
+    before_action :task_params, only: [:create, :update]
 
 
     def create
         @project = Project.find(params[:project_id])
         @task = Task.new task_params
+        @task.user = current_user
         @task.project = @project
         if @task.save
             flash[:notice] = 'Task created successfully'

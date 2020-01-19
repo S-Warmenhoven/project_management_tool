@@ -1,0 +1,33 @@
+
+    <h1>Update your User Information</h1>
+
+    <%= form_with model: @user, local: true do |f| %>
+        <% if @user.errors.any? %>
+            <p>
+            <%= @user.errors.full_messages.join(', ') %>
+            </p>
+        <% end %>
+
+        <div>
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name %>
+        </div>
+        <div>
+            <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+        </div>
+        <div>
+            <%= f.label :email%>
+            <%= f.email_field :email %>
+        </div>
+
+        <%= f.submit "Update" %>
+
+    <% end %>
+
+    <hr>
+<h5>Security</h5>
+
+<%= link_to('Change Password', edit_password_path(@user.id), class: "btn btn-outline-primary") %>
+
+<br>

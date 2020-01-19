@@ -1,4 +1,6 @@
 class Task < ApplicationRecord
+
+    belongs_to :user
     before_save :capitalize_title
     belongs_to :project
 

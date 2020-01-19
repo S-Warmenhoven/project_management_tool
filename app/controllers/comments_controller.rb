@@ -1,11 +1,13 @@
 class CommentsController < ApplicationController
-  before_action :find_comment, only: [:destroy, :edit, :update]
-  before_action :comment_params, only: [:create, :update]
+    before_action :authenticate_user!
+    before_action :find_comment, only: [:destroy, :edit, :update]
+    before_action :comment_params, only: [:create, :update]
 
 
     def create
         @discussion = Discussion.find(params[:discussion_id])
         @comment = Comment.new comment_params
+        @comment.user = current_user
         @comment.discussion = @discussion
         if @comment.save
             flash[:notice] = 'Comment created successfully'
