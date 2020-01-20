@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
     before_action :authorize!, only: [:edit, :update, :destroy]
     
     def index
-        @projects = Project.all.order(created_at: :desc)
+        @projects = Project.order(created_at: :desc)
     end
 
     def new
@@ -45,9 +45,14 @@ class ProjectsController < ApplicationController
     end
 
     def destroy
-        @project.destroy
-        flash[:danger] = 'Project Deleted'
-        redirect_to projects_path
+        if can? :crud, @project
+            @project.destroy
+            flash[:danger] = 'Project Deleted'
+            redirect_to projects_path
+        else
+            flash[:danger] = 'Access denied'
+            redirect_to project_path(@project)
+        end
     end
 
     private
@@ -61,7 +66,7 @@ class ProjectsController < ApplicationController
     end
 
     def authorize!
-        redirect_to project_path(@project), alert: "Access Denied" unless can? :crud, @project
+        redirect_to root_path, alert: "Access Denied" unless can? :crud, @project
     end
 
 end

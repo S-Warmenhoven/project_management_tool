@@ -40,6 +40,8 @@ class Ability
       #so guest users can't see or changes comments
     end
 
+    can :crud, User, :id => user.id
+
     # can :reset_password, User do |comment|
     #   user.email == email && token_params == token_params
     # end
