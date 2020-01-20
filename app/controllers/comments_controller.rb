@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
     before_action :authenticate_user!
     before_action :find_comment, only: [:destroy, :edit, :update]
     before_action :comment_params, only: [:create, :update]
+    before_action :authorize!, only: [:edit, :update, :destroy]
 
 
     def create

@@ -7,11 +7,12 @@ class Ability
     # Define abilities for the passed in user here. For example:
     #
     user ||= User.new # guest user (not logged in)
-      if user.is_admin?
-        can :manage, :all
-    #   else
-    #     can :read, :all
-      end
+    if user.is_admin?
+      can :manage, :all
+    else
+      can :read, :all
+    end
+    
 
     alias_action :create, :read, :update, :destroy, to: :crud
 
@@ -43,15 +44,11 @@ class Ability
     #   user.email == email && token_params == token_params
     # end
     
+    # See the wiki for details:
+    # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
   end
 end
 
-    # See the wiki for details:
-    # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
   
   
   
-  
-  
-  end
-end

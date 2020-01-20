@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
 
     before_action :authenticate_user!, except: [:index, :show]
     before_action :find_project, only: [:edit, :update, :show, :destroy]
-    before_action :project_params, only: [:create, :update]
+    before_action :authorize!, only: [:edit, :update, :destroy]
     
     def index
         @projects = Project.all.order(created_at: :desc)
@@ -61,7 +61,7 @@ class ProjectsController < ApplicationController
     end
 
     def authorize!
-        redirect_to root_path, alert: "Access Denied" unless can? :crud, @project
+        redirect_to project_path(@project), alert: "Access Denied" unless can? :crud, @project
     end
 
 end

@@ -30,31 +30,29 @@
     </div>
     <div>
         <h1>Add a Project Task</h1>
-        <%= form_with model: [@project, @task], local: true do |f| %>
-            <% if @task.errors.present? %>
-               <p class="form-errors" >
-                <%= @task.errors.full_messages.join(", ") %>
-              </p>
-            <% end %>
-
-            <div class="form-group" >
-                <div class="form-control" >
-                    <%= f.label :title%><br>
-                    <%= f.text_field :title %>
-                </div>
-                <div class="form-control" >
-                    <%= f.label :due_date %>
-                    <%= f.date_field :due_date %>
-                </div>
+        <%= form_with(model: [@project, @task], local: true) do |f|%>
+            <div>
+                <% if @task.errors.present?%>
+                    <%= @task.errors.full_messages.join(', ')%>
+                <% end %>
             </div>
-            <%= f.submit 'Task' %>
+            <div>
+                <%= f.label :title%><br>
+                <%= f.text_field :title %>
+           
+                <%= f.label :body %><br>
+                <%= f.text_area :body, cols: 50, rows:5%>
+            
+                <%= f.label :due_date %><br>
+                <%= f.date_field :due_date %>
+           
+                <br>
+                <%= f.submit %>
+            </div>
         <% end %>
-
     </div>
 
 </section>
-
-<section>
 
     <h1>Add Project Discussions</h1>
 
@@ -119,3 +117,5 @@
         </section>
     <% end %>
 </section>
+
+

@@ -16303,3 +16303,1708 @@ puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
 puma (4.3.1) lib/puma/server.rb:472:in `process_client'
 puma (4.3.1) lib/puma/server.rb:328:in `block in run'
 puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-19 11:08:19 -0800
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 88.0ms | Allocations: 8517)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 144ms (Views: 139.5ms | ActiveRecord: 0.0ms | Allocations: 18558)
+
+
+Started GET "/" for ::1 at 2020-01-19 11:08:24 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 561)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 8253)
+
+
+Started GET "/" for ::1 at 2020-01-19 11:08:25 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 561)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 32.8ms | ActiveRecord: 0.0ms | Allocations: 8254)
+
+
+Started GET "/projects" for ::1 at 2020-01-19 11:08:29 -0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (6.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC[0m
+  ↳ app/views/projects/index.html.erb:2
+  Rendered projects/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 5680)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 16.3ms | ActiveRecord: 19.1ms | Allocations: 16967)
+
+
+Started GET "/projects/41" for ::1 at 2020-01-19 11:08:31 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (7.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  [1m[36mDiscussion Load (6.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:81
+  Rendered projects/show.html.erb within layouts/application (Duration: 230.6ms | Allocations: 187468)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 281ms (Views: 224.9ms | ActiveRecord: 23.2ms | Allocations: 214523)
+
+
+Started GET "/projects/41/edit" for ::1 at 2020-01-19 11:09:11 -0800
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"41"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 313)
+
+
+Started GET "/session/new" for ::1 at 2020-01-19 11:09:11 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2472)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 10593)
+
+
+Started GET "/projects/new" for ::1 at 2020-01-19 11:09:15 -0800
+Processing by ProjectsController#new as HTML
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/session/new" for ::1 at 2020-01-19 11:09:15 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 2109)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 9641)
+
+
+Started GET "/projects/new" for ::1 at 2020-01-19 11:09:17 -0800
+Processing by ProjectsController#new as HTML
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 293)
+
+
+Started GET "/session/new" for ::1 at 2020-01-19 11:09:17 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 2110)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 9641)
+
+
+Started GET "/projects" for ::1 at 2020-01-19 11:09:18 -0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC[0m
+  ↳ app/views/projects/index.html.erb:2
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1290)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.3ms | Allocations: 9112)
+
+
+Started GET "/projects/new" for ::1 at 2020-01-19 11:09:19 -0800
+Processing by ProjectsController#new as HTML
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 292)
+
+
+Started GET "/session/new" for ::1 at 2020-01-19 11:09:19 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 2108)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 9639)
+
+
+Started GET "/users/new" for ::1 at 2020-01-19 11:09:22 -0800
+  
+SyntaxError (/Users/stephaniewarmenhoven/Documents/Bootcamp/rails_projects/pm_tool/pm_tool/app/controllers/users_controller.rb:87: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/users_controller.rb:87: syntax error, unexpected end, expecting end-of-input
+app/controllers/users_controller.rb:87: syntax error, unexpected end, expecting end-of-input
+app/controllers/users_controller.rb:87: syntax error, unexpected end, expecting end-of-input
+Started GET "/users/new" for ::1 at 2020-01-19 11:10:02 -0800
+  
+SyntaxError (/Users/stephaniewarmenhoven/Documents/Bootcamp/rails_projects/pm_tool/pm_tool/app/controllers/users_controller.rb:87: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/users_controller.rb:87: syntax error, unexpected end, expecting end-of-input
+app/controllers/users_controller.rb:87: syntax error, unexpected end, expecting end-of-input
+app/controllers/users_controller.rb:87: syntax error, unexpected end, expecting end-of-input
+Started GET "/users/new" for ::1 at 2020-01-19 11:10:14 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1949)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 16.1ms | ActiveRecord: 2.8ms | Allocations: 18143)
+
+
+Started GET "/users/new" for ::1 at 2020-01-19 11:10:32 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1398)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 23.4ms | ActiveRecord: 2.6ms | Allocations: 16762)
+
+
+Started GET "/users/new" for ::1 at 2020-01-19 11:10:33 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1329)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 8980)
+
+
+Started POST "/users" for ::1 at 2020-01-19 11:10:54 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"6Bg+10hAw4UWGWC1mZ7DjQJuUb8eaVvdrYdtou0WYRMkBVqM8t7gZmvbNRRcfJZ3n0mGFV0oDWh0EH5N2o0l9A==", "user"=>{"first_name"=>"Monkey", "last_name"=>"Pants", "email"=>"monkey@monkey.ca", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Exists? (5.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "monkey@monkey.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mUser Create (11.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Monkey"], ["last_name", "Pants"], ["email", "monkey@monkey.ca"], ["password_digest", "$2a$12$aELBprOWq40do32sI4RWfehGE.MT1.jAcYIfMEYv3PQ3.tn/rmGSC"], ["created_at", "2020-01-19 19:10:54.602898"], ["updated_at", "2020-01-19 19:10:54.602898"]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 231ms (ActiveRecord: 17.6ms | Allocations: 4245)
+
+
+Started GET "/" for ::1 at 2020-01-19 11:10:54 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 560)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 9172)
+
+
+Started GET "/users/78/edit" for ::1 at 2020-01-19 11:11:00 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `find_user'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.7ms | Allocations: 2506)
+
+
+  
+SyntaxError (/Users/stephaniewarmenhoven/Documents/Bootcamp/rails_projects/pm_tool/pm_tool/app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+  end
+  ^~~):
+  
+app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+app/controllers/users_controller.rb:79:in `authorize!'
+Started GET "/users/78/edit" for ::1 at 2020-01-19 11:11:19 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `find_user'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.0ms | Allocations: 10223)
+
+
+  
+SyntaxError (/Users/stephaniewarmenhoven/Documents/Bootcamp/rails_projects/pm_tool/pm_tool/app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+  end
+  ^~~):
+  
+app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+app/controllers/users_controller.rb:79:in `authorize!'
+Started GET "/about" for ::1 at 2020-01-19 11:11:24 -0800
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.7ms | Allocations: 87)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.3ms | Allocations: 8774)
+
+
+Started GET "/users/78/edit" for ::1 at 2020-01-19 11:11:26 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `find_user'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms | Allocations: 4846)
+
+
+  
+SyntaxError (/Users/stephaniewarmenhoven/Documents/Bootcamp/rails_projects/pm_tool/pm_tool/app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+  end
+  ^~~):
+  
+app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+app/controllers/users_controller.rb:79:in `authorize!'
+Started GET "/users/78/edit" for ::1 at 2020-01-19 11:11:43 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `find_user'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.6ms | Allocations: 10239)
+
+
+  
+SyntaxError (/Users/stephaniewarmenhoven/Documents/Bootcamp/rails_projects/pm_tool/pm_tool/app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+  end
+  ^~~):
+  
+app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+app/models/ability.rb:56: syntax error, unexpected end, expecting end-of-input
+app/controllers/users_controller.rb:79:in `authorize!'
+Started GET "/users/78/edit" for ::1 at 2020-01-19 11:16:51 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `find_user'
+Redirected to 
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 3.2ms | Allocations: 14258)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/controllers/users_controller.rb:80:in `authorize!'
+Started GET "/info" for ::1 at 2020-01-19 11:17:39 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/info"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/78/edit" for ::1 at 2020-01-19 11:19:01 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `find_user'
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize! rendered or redirected
+Completed 302 Found in 25ms (ActiveRecord: 2.8ms | Allocations: 13774)
+
+
+Started GET "/" for ::1 at 2020-01-19 11:19:01 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 561)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 9018)
+
+
+Started GET "/users/78/edit" for ::1 at 2020-01-19 11:19:05 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `find_user'
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize! rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 1634)
+
+
+Started GET "/" for ::1 at 2020-01-19 11:19:05 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 560)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 8900)
+
+
+Started GET "/users/78/edit" for ::1 at 2020-01-19 11:19:09 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `find_user'
+Redirected to http://localhost:3000/
+Filter chain halted as :authorize! rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 1638)
+
+
+Started GET "/" for ::1 at 2020-01-19 11:19:09 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 561)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 8894)
+
+
+Started GET "/projects/new" for ::1 at 2020-01-19 11:19:14 -0800
+Processing by ProjectsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 3.9ms | Allocations: 1417)
+  Rendered projects/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1718)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 15.8ms | ActiveRecord: 2.3ms | Allocations: 14656)
+
+
+Started POST "/projects" for ::1 at 2020-01-19 11:19:40 -0800
+Processing by ProjectsController#create as HTML
+  Parameters: {"authenticity_token"=>"6V2yUAg72YRFsatO0LxfJNQlbJbxWqvJfexPtTUgwS0lQNYLsqX6Zzhz/u8VXgreSQK7PLIb/Xyke1xaAruFyg==", "project"=>{"title"=>"Exam", "due_date"=>"2020-01-29", "description"=>"This is a test"}, "commit"=>"Create Project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:18:in `create'
+  [1m[36mProject Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE LOWER("projects"."title") = LOWER($1) LIMIT $2[0m  [["title", "Exam"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:18:in `create'
+  [1m[36mProject Create (16.7ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "due_date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Exam"], ["description", "This is a test"], ["due_date", "2020-01-29 00:00:00"], ["created_at", "2020-01-19 19:19:40.930910"], ["updated_at", "2020-01-19 19:19:40.930910"], ["user_id", 78]]
+  ↳ app/controllers/projects_controller.rb:18:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:18:in `create'
+Redirected to http://localhost:3000/projects/42
+Completed 302 Found in 32ms (ActiveRecord: 22.5ms | Allocations: 4852)
+
+
+Started GET "/projects/42" for ::1 at 2020-01-19 11:19:40 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 42]]
+  ↳ app/views/projects/show.html.erb:13
+  [1m[36mDiscussion Load (0.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."project_id" = $1[0m  [["project_id", 42]]
+  ↳ app/views/projects/show.html.erb:81
+  Rendered projects/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3231)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 35ms (Views: 12.4ms | ActiveRecord: 7.0ms | Allocations: 26441)
+
+
+Started GET "/projects/42/edit" for ::1 at 2020-01-19 11:19:51 -0800
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 1.7ms | Allocations: 1008)
+  Rendered projects/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1171)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 0.5ms | Allocations: 10259)
+
+
+Started PATCH "/projects/42" for ::1 at 2020-01-19 11:19:56 -0800
+Processing by ProjectsController#update as HTML
+  Parameters: {"authenticity_token"=>"RS7r6Rc0vHBmFZdiKnPPPRG/TmNrNDjpkiMMe4rzeqCJM4+yraqfkxvXwsPvkZrHjJiZySh1blxLtB+UvWg+Rw==", "project"=>{"title"=>"Exam", "due_date"=>"2020-01-29", "description"=>"This is a test!"}, "commit"=>"Update Project", "id"=>"42"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `update'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:39:in `update'
+  [1m[36mProject Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE LOWER("projects"."title") = LOWER($1) AND "projects"."id" != $2 LIMIT $3[0m  [["title", "Exam"], ["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `update'
+  [1m[36mProject Update (1.8ms)[0m  [1m[33mUPDATE "projects" SET "description" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["description", "This is a test!"], ["updated_at", "2020-01-19 19:19:56.266140"], ["id", 42]]
+  ↳ app/controllers/projects_controller.rb:39:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:39:in `update'
+Redirected to http://localhost:3000/projects/42
+Completed 302 Found in 13ms (ActiveRecord: 3.3ms | Allocations: 6076)
+
+
+Started GET "/projects/42" for ::1 at 2020-01-19 11:19:56 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 42]]
+  ↳ app/views/projects/show.html.erb:13
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."project_id" = $1[0m  [["project_id", 42]]
+  ↳ app/views/projects/show.html.erb:81
+  Rendered projects/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2820)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 1.0ms | Allocations: 11734)
+
+
+Started DELETE "/projects/42" for ::1 at 2020-01-19 11:20:01 -0800
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pHeBSVTo3gEW9Mh/vd3FiKYV7oQ4OEoYQxYHUeOHUoBoauUS7nb94ms2nd54P5ByOzI5Lnt5HK2agRS+1BwWZw==", "id"=>"42"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:48:in `destroy'
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 42]]
+  ↳ app/controllers/projects_controller.rb:48:in `destroy'
+  [1m[36mDiscussion Load (0.5ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."project_id" = $1[0m  [["project_id", 42]]
+  ↳ app/controllers/projects_controller.rb:48:in `destroy'
+  [1m[36mProject Destroy (1.1ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 42]]
+  ↳ app/controllers/projects_controller.rb:48:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:48:in `destroy'
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 12ms (ActiveRecord: 3.4ms | Allocations: 4941)
+
+
+Started GET "/projects" for ::1 at 2020-01-19 11:20:01 -0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC[0m
+  ↳ app/views/projects/index.html.erb:2
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.5ms | Allocations: 9753)
+
+
+Started GET "/projects/41" for ::1 at 2020-01-19 11:20:10 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:81
+  Rendered projects/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 3519)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.8ms | Allocations: 12340)
+
+
+Started GET "/projects/41/edit" for ::1 at 2020-01-19 11:20:15 -0800
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 1.6ms | Allocations: 979)
+  Rendered projects/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1042)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.5ms | Allocations: 9984)
+
+
+Started GET "/about" for ::1 at 2020-01-19 11:20:21 -0800
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 8437)
+
+
+Started GET "/projects" for ::1 at 2020-01-19 11:20:25 -0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC[0m
+  ↳ app/views/projects/index.html.erb:2
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.7ms | Allocations: 9721)
+
+
+Started GET "/projects/39" for ::1 at 2020-01-19 11:20:26 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 39]]
+  ↳ app/views/projects/show.html.erb:13
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."project_id" = $1[0m  [["project_id", 39]]
+  ↳ app/views/projects/show.html.erb:81
+  Rendered projects/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3421)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 0.9ms | Allocations: 12331)
+
+
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:20:48 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"eHi7yfYyMKkDpe8CNCq+Xbi3JNw+DzzKfLaaj5V0Wc20Zd+STKwTSn5nuqPxyOunJZDzdn1Oan+lIYlgou8dKg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-08"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mTask Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE LOWER("tasks"."title") = LOWER($1) AND "tasks"."project_id" = $2 LIMIT $3[0m  [["title", "hhhhh"], ["project_id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 39]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3420)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.6ms | Allocations: 9169)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    58: 
+    59:     <h1>Add Project Discussions</h1>
+    60: 
+    61:     <%= form_with model: [@project, @discussion], local: true do |f| %>
+    62:         <% if @discussion.errors.present? %>
+    63:             <p class="form-errors" >
+    64:                 <%= @discussion.errors.full_messages.join(", ") %>
+  
+app/views/projects/show.html.erb:61
+app/controllers/tasks_controller.rb:18:in `create'
+Started GET "/projects/39" for ::1 at 2020-01-19 11:23:20 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 39]]
+  ↳ app/views/projects/show.html.erb:13
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."project_id" = $1[0m  [["project_id", 39]]
+  ↳ app/views/projects/show.html.erb:81
+  Rendered projects/show.html.erb within layouts/application (Duration: 6.7ms | Allocations: 4618)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.9ms | Allocations: 14811)
+
+
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:23:31 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mTask Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE LOWER("tasks"."title") = LOWER($1) AND "tasks"."project_id" = $2 LIMIT $3[0m  [["title", "hhhhh"], ["project_id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 39]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3400)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 2.0ms | Allocations: 8584)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    58: 
+    59:     <h1>Add Project Discussions</h1>
+    60: 
+    61:     <%= form_with model: [@project, @discussion], local: true do |f| %>
+    62:         <% if @discussion.errors.present? %>
+    63:             <p class="form-errors" >
+    64:                 <%= @discussion.errors.full_messages.join(", ") %>
+  
+app/views/projects/show.html.erb:61
+app/controllers/tasks_controller.rb:18:in `create'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:28:00 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mTask Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE LOWER("tasks"."title") = LOWER($1) AND "tasks"."project_id" = $2 LIMIT $3[0m  [["title", "hhhhh"], ["project_id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 39]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 4804)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 7.8ms | Allocations: 31207)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    58: 
+    59:     <h1>Add Project Discussions</h1>
+    60: 
+    61:     <%= form_with model: [@project, @new_discussion], local: true do |f| %>
+    62:         <% if @new_discussion.errors.present? %>
+    63:             <p class="form-errors" >
+    64:                 <%= @new_discussion.errors.full_messages.join(", ") %>
+  
+app/views/projects/show.html.erb:61
+app/controllers/tasks_controller.rb:18:in `create'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:31:39 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[36mTask Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE LOWER("tasks"."title") = LOWER($1) AND "tasks"."project_id" = $2 LIMIT $3[0m  [["title", "hhhhh"], ["project_id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 39]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 4811)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 8.4ms | Allocations: 31214)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    60: 
+    61:     <h1>Add Project Discussions</h1>
+    62: 
+    63:     <%= form_with model: [@project, @discussion], local: true do |f| %>
+    64:         <% if @discussion.errors.present? %>
+    65:             <p class="form-errors" >
+    66:                 <%= @discussion.errors.full_messages.join(", ") %>
+  
+app/views/projects/show.html.erb:63
+app/controllers/tasks_controller.rb:18:in `create'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:32:37 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 25ms (ActiveRecord: 4.0ms | Allocations: 10234)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:33:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:33:20 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 16ms (ActiveRecord: 4.5ms | Allocations: 10224)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:33:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:34:14 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 15ms (ActiveRecord: 4.3ms | Allocations: 10242)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:37:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:34:46 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 15ms (ActiveRecord: 4.2ms | Allocations: 10284)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:37:in `find_task'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE LOWER("tasks"."title") = LOWER($1) AND "tasks"."project_id" IS NULL LIMIT $2[0m  [["title", "Happy"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTask Load (2.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE LOWER("tasks"."title") = LOWER($1) AND "tasks"."project_id" IS NULL LIMIT $2[0m  [["title", "Happy"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[36mTask Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE LOWER("tasks"."title") = LOWER($1) AND "tasks"."project_id" = $2 LIMIT $3[0m  [["title", "Happy"], ["project_id", 39], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE LOWER("tasks"."title") = LOWER($1) AND "tasks"."project_id" = $2 LIMIT $3[0m  [["title", "Happy"], ["project_id", 39], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE LOWER("tasks"."title") = LOWER($1) AND "tasks"."project_id" = $2 LIMIT $3[0m  [["title", "Happy"], ["project_id", 39], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE LOWER("tasks"."title") = LOWER($1) AND "tasks"."project_id" = $2 LIMIT $3[0m  [["title", "Happy"], ["project_id", 39], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE LOWER("tasks"."title") = LOWER($1) AND "tasks"."project_id" = $2 LIMIT $3[0m  [["title", "Happy"], ["project_id", 39], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE LOWER("tasks"."title") = LOWER($1) AND "tasks"."project_id" = $2 LIMIT $3[0m  [["title", "Happy"], ["project_id", 39], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/projects/39/tasks" for ::1 at 2020-01-19 11:51:31 -0800
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/projects/39/tasks"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:51:43 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 41ms (ActiveRecord: 5.7ms | Allocations: 11826)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:37:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:53:49 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 17ms (ActiveRecord: 5.0ms | Allocations: 10066)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:37:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:55:30 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 16ms (ActiveRecord: 5.0ms | Allocations: 10084)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:37:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:56:05 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 17ms (ActiveRecord: 5.6ms | Allocations: 10084)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:37:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:56:33 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 14ms (ActiveRecord: 4.2ms | Allocations: 10084)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:37:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:56:53 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 15ms (ActiveRecord: 4.4ms | Allocations: 10059)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:37:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:57:08 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 16ms (ActiveRecord: 4.7ms | Allocations: 10062)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:37:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 11:57:14 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1193)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:37:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 12:01:12 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 28ms (ActiveRecord: 4.6ms | Allocations: 10081)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:34:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 12:04:32 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 16ms (ActiveRecord: 4.0ms | Allocations: 10079)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:34:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 12:04:56 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 16ms (ActiveRecord: 5.0ms | Allocations: 10081)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:34:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 12:05:01 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1193)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:34:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 12:05:22 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 404 Not Found in 24ms (ActiveRecord: 4.6ms | Allocations: 10111)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tasks_controller.rb:34:in `find_task'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 12:06:08 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 6.7ms | Allocations: 21628)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/tasks_controller.rb:11:in `create'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 12:06:29 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 6.3ms | Allocations: 23492)
+
+
+  
+NoMethodError (undefined method `capitalize!' for nil:NilClass):
+  
+app/models/task.rb:21:in `capitalize_title'
+app/controllers/tasks_controller.rb:14:in `create'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 12:07:12 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:10:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `create'
+  [1m[36mTask Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:14:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 39]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 13.4ms | Allocations: 6077)
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 7.2ms | Allocations: 214383)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    60: 
+    61:     <h1>Add Project Discussions</h1>
+    62: 
+    63:     <%= form_with model: [@project, @discussion], local: true do |f| %>
+    64:         <% if @discussion.errors.present? %>
+    65:             <p class="form-errors" >
+    66:                 <%= @discussion.errors.full_messages.join(", ") %>
+  
+app/views/projects/show.html.erb:63
+app/controllers/tasks_controller.rb:19:in `create'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 12:15:59 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+[31mUnpermitted parameter: :title[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 39]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 18.6ms | Allocations: 6678)
+Completed 500 Internal Server Error in 303ms (ActiveRecord: 10.1ms | Allocations: 220569)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    60: 
+    61:     <h1>Add Project Discussions</h1>
+    62: 
+    63:     <%= form_with model: [@project, @discussion], local: true do |f| %>
+    64:         <% if @discussion.errors.present? %>
+    65:             <p class="form-errors" >
+    66:                 <%= @discussion.errors.full_messages.join(", ") %>
+  
+app/views/projects/show.html.erb:63
+app/controllers/tasks_controller.rb:20:in `create'
+Started POST "/projects/39/tasks" for ::1 at 2020-01-19 12:23:27 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"bCyS7IJ+GZf7Wk7iTftwgKkwj4H7H6DFd24iD0oflrmgMfa3OOA6dIaYG0OIGSV6NBdYK7he9nCu+THgfYTSXg==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Task", "project_id"=>"39"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+[31mUnpermitted parameter: :title[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 39]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3120)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 97ms (Views: 59.2ms | ActiveRecord: 1.9ms | Allocations: 47530)
+
+
+Started DELETE "/session" for ::1 at 2020-01-19 12:23:53 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wvGdUeNaDUqeuOxNDmQ1oBqGVR1PZ2G+rGp+ct7n8/sO7PkKWcQuqeN6uezLhmBah6GCtwwmNwt1/W2d6Xy3HA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 363)
+
+
+Started GET "/" for ::1 at 2020-01-19 12:23:53 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 698)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 8963)
+
+
+Started GET "/session/new" for ::1 at 2020-01-19 12:23:54 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2497)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 10612)
+
+
+Started POST "/session" for ::1 at 2020-01-19 12:23:59 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"RaOKmaQCsAcNLoldzL6johLTO+4Aoi3p9PoSaQ1qUoWJvu7CHpyT5HDs3PwJXPZYj/TsREPje1wtbQGGOvEWYg==", "email"=>"steph_war@yahoo.ca", "password"=>"[FILTERED]", "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "steph_war@yahoo.ca"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 215ms (ActiveRecord: 0.4ms | Allocations: 1049)
+
+
+Started GET "/" for ::1 at 2020-01-19 12:24:00 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 560)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.3ms | Allocations: 8909)
+
+
+Started GET "/projects" for ::1 at 2020-01-19 12:24:02 -0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC[0m
+  ↳ app/views/projects/index.html.erb:2
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1453)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.8ms | Allocations: 10522)
+
+
+Started GET "/projects/41" for ::1 at 2020-01-19 12:24:04 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1606)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 31ms (Views: 12.9ms | ActiveRecord: 7.2ms | Allocations: 19051)
+
+
+Started POST "/projects/41/tasks" for ::1 at 2020-01-19 12:24:17 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"MmEci361+tDjRteFcjbDTkFDw7Qw3ZkozgzG6pilyCb+fHjQxCvZM56EgiS31Ja03GQUHnOcz50Xm9UFrz6MwQ==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Submit", "project_id"=>"41"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+[31mUnpermitted parameter: :title[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1741)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 34.3ms | ActiveRecord: 1.6ms | Allocations: 14358)
+
+
+Started POST "/projects/41/tasks" for ::1 at 2020-01-19 12:36:11 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"MmEci361+tDjRteFcjbDTkFDw7Qw3ZkozgzG6pilyCb+fHjQxCvZM56EgiS31Ja03GQUHnOcz50Xm9UFrz6MwQ==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Submit", "project_id"=>"41"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+[31mUnpermitted parameter: :title[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 11.9ms | Allocations: 6847)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.8ms | Allocations: 13007)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    58: 
+    59:     <h1>Add Project Discussions</h1>
+    60: 
+    61:     <%= form_with model: [@project, @discussion], local: true do |f| %>
+    62:         <% if @discussion.errors.present? %>
+    63:             <p class="form-errors" >
+    64:                 <%= @discussion.errors.full_messages.join(", ") %>
+  
+app/views/projects/show.html.erb:61
+app/controllers/tasks_controller.rb:20:in `create'
+Started POST "/projects/41/tasks" for ::1 at 2020-01-19 12:36:40 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"MmEci361+tDjRteFcjbDTkFDw7Qw3ZkozgzG6pilyCb+fHjQxCvZM56EgiS31Ja03GQUHnOcz50Xm9UFrz6MwQ==", "task"=>{"title"=>"hhhhh", "due_date"=>"2020-01-30"}, "commit"=>"Submit", "project_id"=>"41"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+[31mUnpermitted parameter: :title[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2696)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 23.1ms | ActiveRecord: 1.8ms | Allocations: 16603)
+
+
+Started POST "/projects/41/tasks" for ::1 at 2020-01-19 12:36:56 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"Zz4D7dBk+o4b5YCs4GuHMhSoVPIAGPwMWdgCNy/J89arI2e2avrZbWYn1Q0lidLIiY+DWENZqrmATxHYGFK3MQ==", "task"=>{"title"=>"hhhhh", "body"=>"llllalalalala", "due_date"=>"2020-01-30"}, "commit"=>"Create Task", "project_id"=>"41"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+[31mUnpermitted parameter: :title[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1939)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 12.3ms | ActiveRecord: 1.5ms | Allocations: 14262)
+
+
+Started POST "/projects/41/tasks" for ::1 at 2020-01-19 12:37:28 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"pquJVDtKNocRGVJEXRtIzlJ/sPsLQMDlVDqemicXjUZqtu0PgdQVZGzbB+WY+R00z1hnUUgBllCNrY11EIzJoQ==", "task"=>{"title"=>"this is nit blank", "body"=>"llllalalalala", "due_date"=>"2020-01-16"}, "commit"=>"Create Task", "project_id"=>"41"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+[31mUnpermitted parameter: :title[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1931)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 11.8ms | ActiveRecord: 1.4ms | Allocations: 14254)
+
+
+Started POST "/projects/41/tasks" for ::1 at 2020-01-19 12:39:44 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"pquJVDtKNocRGVJEXRtIzlJ/sPsLQMDlVDqemicXjUZqtu0PgdQVZGzbB+WY+R00z1hnUUgBllCNrY11EIzJoQ==", "task"=>{"title"=>"this is nit blank", "body"=>"llllalalalala", "due_date"=>"2020-01-16"}, "commit"=>"Create Task", "project_id"=>"41"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+[31mUnpermitted parameter: :title[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1820)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 16.7ms | ActiveRecord: 0.9ms | Allocations: 15426)
+
+
+Started POST "/projects/41/tasks" for ::1 at 2020-01-19 12:41:23 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"pquJVDtKNocRGVJEXRtIzlJ/sPsLQMDlVDqemicXjUZqtu0PgdQVZGzbB+WY+R00z1hnUUgBllCNrY11EIzJoQ==", "task"=>{"title"=>"this is nit blank", "body"=>"llllalalalala", "due_date"=>"2020-01-16"}, "commit"=>"Create Task", "project_id"=>"41"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+[31mUnpermitted parameter: :title[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2574)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 12.1ms | ActiveRecord: 1.0ms | Allocations: 16176)
+
+
+Started POST "/projects/41/tasks" for ::1 at 2020-01-19 12:41:32 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"oPGQbO5TeoUHKZ3EWraRldY6EXrZz1MawmSWi4KHhIZs7PQ3VM1ZZnrryGWfVMRvSx3G0JqOBa8b84VktRzAYQ==", "task"=>{"title"=>"this is nit blank", "body"=>"llllalalalala", "due_date"=>"2020-01-16"}, "commit"=>"Create Task", "project_id"=>"41"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+[31mUnpermitted parameter: :title[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1936)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 11.2ms | ActiveRecord: 1.5ms | Allocations: 14253)
+
+
+Started POST "/projects/41/tasks" for ::1 at 2020-01-19 12:42:07 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"oPGQbO5TeoUHKZ3EWraRldY6EXrZz1MawmSWi4KHhIZs7PQ3VM1ZZnrryGWfVMRvSx3G0JqOBa8b84VktRzAYQ==", "task"=>{"title"=>"this is nit blank", "body"=>"llllalalalala", "due_date"=>"2020-01-16"}, "commit"=>"Create Task", "project_id"=>"41"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+[31mUnpermitted parameter: :title[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2567)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 12.2ms | ActiveRecord: 0.8ms | Allocations: 16164)
+
+
+Started POST "/projects/41/tasks" for ::1 at 2020-01-19 12:42:13 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"oPGQbO5TeoUHKZ3EWraRldY6EXrZz1MawmSWi4KHhIZs7PQ3VM1ZZnrryGWfVMRvSx3G0JqOBa8b84VktRzAYQ==", "task"=>{"title"=>"this is nit blank", "body"=>"llllalalalala", "due_date"=>"2020-01-16"}, "commit"=>"Create Task", "project_id"=>"41"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+[31mUnpermitted parameter: :title[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1936)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 22.0ms | ActiveRecord: 1.0ms | Allocations: 14263)
+
+
+Started POST "/projects/41/tasks" for ::1 at 2020-01-19 12:42:48 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"oPGQbO5TeoUHKZ3EWraRldY6EXrZz1MawmSWi4KHhIZs7PQ3VM1ZZnrryGWfVMRvSx3G0JqOBa8b84VktRzAYQ==", "task"=>{"title"=>"this is nit blank", "body"=>"llllalalalala", "due_date"=>"2020-01-16"}, "commit"=>"Create Task", "project_id"=>"41"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+[31mUnpermitted parameter: :title[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2430)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 12.8ms | ActiveRecord: 0.9ms | Allocations: 16050)
+
+
+Started POST "/projects/41/tasks" for ::1 at 2020-01-19 12:43:15 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"oPGQbO5TeoUHKZ3EWraRldY6EXrZz1MawmSWi4KHhIZs7PQ3VM1ZZnrryGWfVMRvSx3G0JqOBa8b84VktRzAYQ==", "task"=>{"title"=>"this is nit blank", "body"=>"llllalalalala", "due_date"=>"2020-01-16"}, "commit"=>"Create Task", "project_id"=>"41"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+[31mUnpermitted parameter: :title[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2438)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 12.0ms | ActiveRecord: 0.8ms | Allocations: 16034)
+
+
+Started POST "/projects/41/tasks" for ::1 at 2020-01-19 12:43:20 -0800
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"pHN0GFc5G1mL08mChqMJZcFV+ylfWmzcKNwvGzZOhVNobhBD7ac4uvYRnCNDQVyfXHIsgxwbOmnxSzz0AdXBtA==", "task"=>{"title"=>"this is nit blank", "body"=>"llllalalalala", "due_date"=>"2020-01-16"}, "commit"=>"Create Task", "project_id"=>"41"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:9:in `create'
+[31mUnpermitted parameter: :title[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[36mTask Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tasks" WHERE "tasks"."title" IS NULL AND "tasks"."project_id" = $1 LIMIT $2[0m  [["project_id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tasks_controller.rb:15:in `create'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  Rendered projects/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1801)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 10.2ms | ActiveRecord: 1.1ms | Allocations: 14115)
+
+
+Started GET "/projects/41/edit" for ::1 at 2020-01-19 12:53:59 -0800
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 3.5ms | Allocations: 1418)
+  Rendered projects/edit.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1721)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 43.3ms | ActiveRecord: 1.1ms | Allocations: 12335)
+
+
+Started PATCH "/projects/41" for ::1 at 2020-01-19 12:54:01 -0800
+Processing by ProjectsController#update as HTML
+  Parameters: {"authenticity_token"=>"K/2JyQG9hOd38lsoACVuHg3Xv5FaMPJRkUR5RXrfSmrn4O2SuyOnBAowDonFxzvkkPBoOxlxpORI02qqTUQOjQ==", "project"=>{"title"=>"Healthcare!", "due_date"=>"2020-04-03", "description"=>"Education Director"}, "commit"=>"Update Project", "id"=>"41"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:39:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `update'
+  [1m[36mProject Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE LOWER("projects"."title") = LOWER($1) AND "projects"."id" != $2 LIMIT $3[0m  [["title", "Healthcare!"], ["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:39:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:39:in `update'
+Redirected to http://localhost:3000/projects/41
+Completed 302 Found in 12ms (ActiveRecord: 3.5ms | Allocations: 6393)
+
+
+Started GET "/projects/41" for ::1 at 2020-01-19 12:54:01 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:13
+  [1m[36mDiscussion Load (0.4ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/views/projects/show.html.erb:81
+  Rendered projects/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 4683)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 1.1ms | Allocations: 13745)
+
+
+Started DELETE "/projects/41" for ::1 at 2020-01-19 12:54:12 -0800
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VhC0CaIsxUyuG5cN5Qz7sbAnKxP4Ncet6KI6q7G5xQ+aDdBSGLLmr9PZwqwg7q5LLQD8ubt0kRgxNSlEhiKB6A==", "id"=>"41"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:48:in `destroy'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/controllers/projects_controller.rb:48:in `destroy'
+  [1m[36mTask Destroy (2.3ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 408]]
+  ↳ app/controllers/projects_controller.rb:48:in `destroy'
+  [1m[36mTask Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 409]]
+  ↳ app/controllers/projects_controller.rb:48:in `destroy'
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."project_id" = $1[0m  [["project_id", 41]]
+  ↳ app/controllers/projects_controller.rb:48:in `destroy'
+  [1m[36mProject Destroy (0.6ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 41]]
+  ↳ app/controllers/projects_controller.rb:48:in `destroy'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:48:in `destroy'
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 13ms (ActiveRecord: 4.8ms | Allocations: 7064)
+
+
+Started GET "/projects" for ::1 at 2020-01-19 12:54:12 -0800
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" DESC[0m
+  ↳ app/views/projects/index.html.erb:2
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1387)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.9ms | Allocations: 9997)
+
+
+Started GET "/projects/39" for ::1 at 2020-01-19 12:54:18 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 39]]
+  ↳ app/views/projects/show.html.erb:13
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."project_id" = $1[0m  [["project_id", 39]]
+  ↳ app/views/projects/show.html.erb:81
+  Rendered projects/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3751)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 1.0ms | Allocations: 12662)
+
+
+Started GET "/projects/37" for ::1 at 2020-01-19 12:55:02 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 37]]
+  ↳ app/views/projects/show.html.erb:13
+  [1m[36mDiscussion Load (0.3ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."project_id" = $1[0m  [["project_id", 37]]
+  ↳ app/views/projects/show.html.erb:81
+  Rendered projects/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3639)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 1.0ms | Allocations: 12549)
+
+
+Started GET "/projects/37" for ::1 at 2020-01-19 12:55:32 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 37]]
+  ↳ app/views/projects/show.html.erb:13
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."project_id" = $1[0m  [["project_id", 37]]
+  ↳ app/views/projects/show.html.erb:59
+  Rendered projects/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4076)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.8ms | Allocations: 14267)
+
+
+Started GET "/projects/37" for ::1 at 2020-01-19 12:56:04 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 37]]
+  ↳ app/views/projects/show.html.erb:13
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."project_id" = $1[0m  [["project_id", 37]]
+  ↳ app/views/projects/show.html.erb:79
+  Rendered projects/show.html.erb within layouts/application (Duration: 6.1ms | Allocations: 4867)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 29ms (Views: 15.0ms | ActiveRecord: 0.8ms | Allocations: 15063)
+
+
+Started GET "/projects/37" for ::1 at 2020-01-19 12:56:05 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 37]]
+  ↳ app/views/projects/show.html.erb:13
+  [1m[36mDiscussion Load (0.2ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."project_id" = $1[0m  [["project_id", 37]]
+  ↳ app/views/projects/show.html.erb:79
+  Rendered projects/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3643)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.7ms | Allocations: 12554)
+
+
+Started GET "/projects/29" for ::1 at 2020-01-19 12:56:13 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:60:in `find_project'
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = $1[0m  [["project_id", 29]]
+  ↳ app/views/projects/show.html.erb:13
+  [1m[36mDiscussion Load (0.1ms)[0m  [1m[34mSELECT "discussions".* FROM "discussions" WHERE "discussions"."project_id" = $1[0m  [["project_id", 29]]
+  ↳ app/views/projects/show.html.erb:79
+  Rendered projects/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3193)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `current_user'
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.6ms | Allocations: 12103)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE LOWER("projects"."title") = LOWER($1) LIMIT $2[0m  [["title", "hi"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE LOWER("projects"."title") = LOWER($1) LIMIT $2[0m  [["title", "hi"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE LOWER("projects"."title") = LOWER($1) LIMIT $2[0m  [["title", "hi"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE LOWER("projects"."title") = LOWER($1) LIMIT $2[0m  [["title", "hi"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" WHERE LOWER("projects"."title") = LOWER($1) LIMIT $2[0m  [["title", "hi"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4837840509860720355)[0m
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4837840509860720355)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

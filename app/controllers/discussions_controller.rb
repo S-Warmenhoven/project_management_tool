@@ -3,6 +3,7 @@ class DiscussionsController < ApplicationController
     before_action :authenticate_user!
     before_action :find_discussion, only: [:destroy, :edit, :update]
     before_action :description_params, only: [:create, :update]
+    before_action :authorize!, only: [:edit, :update, :destroy]
 
 
     def create

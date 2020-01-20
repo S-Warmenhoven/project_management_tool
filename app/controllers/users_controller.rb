@@ -77,12 +77,11 @@ class UsersController < ApplicationController
 
     def authorize!
         unless can? :crud, @user
-        redirect_to root_path, 
+        redirect_to root_path 
         flash[:alert] =  'Access Denied'
         end
     end
 
 end
 
-end
 
