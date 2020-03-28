@@ -10,9 +10,6 @@ RSpec.describe ProjectsController, type: :controller do
         @unauthorized_user ||= FactoryBot.create :user 
     end
 
-    # let(:current_user) { FactoryBot.create :user }
-    # let(:unauthorized_user) { FactoryBot.create :user }
-
     describe '#new' do
         context 'with no user signed in' do 
             it 'should redirect to session#new' do
@@ -49,11 +46,7 @@ RSpec.describe ProjectsController, type: :controller do
             end
 
             it 'should set an instance variable with a new project' do
-                get(:new)
-
-                # assigns(:job_post)
-                # Return the value of an instance variable @job_post 
-                # from the instance of our ProjectsController. 
+                get(:new) 
                 # Only available if we have added the 
                 # gem 'rails-controller-testing
                 
